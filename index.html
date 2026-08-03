@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dress Up Game</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -15,35 +16,35 @@
 
         <div class="character">
 
-            <!-- الخلفية -->
-            <img src="images/background/bg1.png" id="background" class="layer">
-
             <!-- الجسم -->
-            <img src="images/body/body1.png" id="body" class="layer">
-
-            <!-- الوجه -->
-            <img src="images/face/face1.png" id="face" class="layer">
-
-            <!-- العيون -->
-            <img src="images/eyes/eyes1.png" id="eyes" class="layer">
-
-            <!-- الفم -->
-            <img src="images/mouth/mouth1.png" id="mouth" class="layer">
+            <img src="images/body/body1.png"
+                 id="body"
+                 class="layer">
 
             <!-- الملابس -->
-            <img src="images/clothes/clothes1.png" id="clothes" class="layer">
+            <img src="images/clothes/clothes1.png"
+                 id="clothes"
+                 class="layer">
 
             <!-- الأحذية -->
-            <img src="images/shoes/shoes1.png" id="shoes" class="layer">
+            <img src="images/shoes/shoes1.png"
+                 id="shoes"
+                 class="layer">
 
             <!-- الشعر الخلفي -->
-            <img src="images/hair/back1.png" id="hairBack" class="layer">
+            <img src="images/hair/back/back1.png"
+                 id="hairBack"
+                 class="layer">
+
+            <!-- العيون -->
+            <img src="images/eyes/eyes1.png"
+                 id="eyes"
+                 class="layer">
 
             <!-- الشعر الأمامي -->
-            <img src="images/hair/front1.png" id="hairFront" class="layer">
-
-            <!-- الإكسسوارات -->
-            <img src="images/accessories/accessory1.png" id="accessory" class="layer">
+            <img src="images/hair/front/front1.png"
+                 id="hairFront"
+                 class="layer">
 
         </div>
 
@@ -52,52 +53,46 @@
     <!-- القائمة -->
     <section class="menu-section">
 
-        <div class="top-bar">
+        <div class="header">
             <h2>Dress Up</h2>
         </div>
 
         <div class="tabs">
 
-            <button class="tab active" data-category="clothes">
+            <button class="tab active"
+                    data-category="clothes">
                 👗 Clothes
             </button>
 
-            <button class="tab" data-category="hair">
+            <button class="tab"
+                    data-category="hair">
                 💇 Hair
             </button>
 
-            <button class="tab" data-category="eyes">
+            <button class="tab"
+                    data-category="eyes">
                 👁 Eyes
             </button>
 
-            <button class="tab" data-category="mouth">
-                😊 Mouth
-            </button>
-
-            <button class="tab" data-category="shoes">
+            <button class="tab"
+                    data-category="shoes">
                 👟 Shoes
-            </button>
-
-            <button class="tab" data-category="accessories">
-                ✨ Accessories
-            </button>
-
-            <button class="tab" data-category="background">
-                🖼 Background
             </button>
 
         </div>
 
-        <!-- ستُنشأ الخيارات تلقائياً بواسطة JavaScript -->
-        <div class="items-grid" id="itemsGrid">
+        <!-- هنا ستظهر الملابس -->
+        <div id="itemsGrid"
+             class="items-grid">
 
         </div>
 
     </section>
 
 </div>
-<script src="data.js"></script>
-<script src="script.js"></script>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

@@ -1,22 +1,30 @@
 const data = {
-    clothes: [
-        "clothes1.png",
-        "clothes2.png",
-        "clothes3.png"
+
+    clothes:[
+        "dress1.png",
+        "dress2.png",
+        "dress3.png"
     ],
 
-    hair: [
-        { front: "front1.png", back: "back1.png" },
-        { front: "front2.png", back: "back2.png" }
+    shoes:[
+        "shoes1.png",
+        "shoes2.png"
     ],
 
-    eyes: [
+    eyes:[
         "eyes1.png",
         "eyes2.png"
     ],
 
-    shoes: [
-        "shoes1.png",
-        "shoes2.png"
+    hair:[
+        {
+            front:"front1.png",
+            back:"back1.png"
+        },
+        {
+            front:"front2.png",
+            back:"back2.png"
+        }
     ]
+
 };

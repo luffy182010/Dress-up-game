@@ -5,7 +5,7 @@ const shoes = document.getElementById("shoes");
 const eyes = document.getElementById("eyes");
 const hair = document.getElementById("hair");
 
-// أسماء المجلدات
+// files name
 const folders = {
     clothes: "Clothes",
     hair: "hair/back",
@@ -13,7 +13,7 @@ const folders = {
     shoes: "shoes"
 };
 
-// تحميل العناصر
+// download items
 function loadItems(category) {
 
     grid.innerHTML = "";
@@ -60,7 +60,7 @@ function loadItems(category) {
 
 }
 
-// تحديد القطعة المختارة
+// selecting the selected pieces 
 function selectItem(selected){
 
     document.querySelectorAll(".item").forEach(item=>{
@@ -73,7 +73,7 @@ function selectItem(selected){
 
 }
 
-// تغيير التبويبات
+// change tabs
 document.querySelectorAll(".tab").forEach(tab=>{
 
     tab.addEventListener("click",()=>{
@@ -88,5 +88,5 @@ document.querySelectorAll(".tab").forEach(tab=>{
 
 });
 
-// أول تشغيل
+// first run
 loadItems("clothes");

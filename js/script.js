@@ -3,78 +3,50 @@ const grid = document.getElementById("itemsGrid");
 const clothes = document.getElementById("clothes");
 const shoes = document.getElementById("shoes");
 const eyes = document.getElementById("eyes");
-const hairFront = document.getElementById("hairFront");
-const hairBack = document.getElementById("hairBack");
+const hair = document.getElementById("hair");
 
-let currentCategory = "clothes";
+// أسماء المجلدات
+const folders = {
+    clothes: "Clothes",
+    hair: "hair/back",
+    eyes: "eyes",
+    shoes: "shoes"
+};
 
-function loadItems(category){
-
-    currentCategory = category;
+// تحميل العناصر
+function loadItems(category) {
 
     grid.innerHTML = "";
 
-    if(category === "hair"){
-
-        data.hair.forEach((hair,index)=>{
-
-            const item = document.createElement("div");
-
-            item.className = "item";
-
-            item.innerHTML = `
-                <img src="Img/hair/front/${hair.front}">
-            `;
-
-            item.onclick = ()=>{
-
-                hairFront.src = `Img/hair/front/${hair.front}`;
-
-                hairBack.src = `Img/hair/back/${hair.back}`;
-
-                selectItem(item);
-
-            };
-
-            grid.appendChild(item);
-
-        });
-
-        return;
-
-    }
-
-    data[category].forEach(image=>{
+    data[category].forEach(image => {
 
         const item = document.createElement("div");
 
         item.className = "item";
 
         item.innerHTML = `
-            <img src="Img/${dataFolders[category]}/${image}">
+            <img src="Img/${folders[category]}/${image}">
         `;
 
-        item.onclick = ()=>{
+        item.onclick = () => {
 
             switch(category){
 
                 case "clothes":
-
                     clothes.src = `Img/Clothes/${image}`;
+                    break;
 
-                break;
-
-                case "shoes":
-
-                    shoes.src = `Img/shoes/${image}`;
-
-                break;
+                case "hair":
+                    hair.src = `Img/hair/back/${image}`;
+                    break;
 
                 case "eyes":
-
                     eyes.src = `Img/eyes/${image}`;
+                    break;
 
-                break;
+                case "shoes":
+                    shoes.src = `Img/shoes/${image}`;
+                    break;
 
             }
 
@@ -88,21 +60,23 @@ function loadItems(category){
 
 }
 
-function selectItem(item){
+// تحديد القطعة المختارة
+function selectItem(selected){
 
-    document.querySelectorAll(".item").forEach(i=>{
+    document.querySelectorAll(".item").forEach(item=>{
 
-        i.style.border = "2px solid transparent";
+        item.style.border = "2px solid transparent";
 
     });
 
-    item.style.border = "3px solid #ff69b4";
+    selected.style.border = "3px solid hotpink";
 
 }
 
+// تغيير التبويبات
 document.querySelectorAll(".tab").forEach(tab=>{
 
-    tab.onclick = ()=>{
+    tab.addEventListener("click",()=>{
 
         document.querySelector(".tab.active").classList.remove("active");
 
@@ -110,18 +84,9 @@ document.querySelectorAll(".tab").forEach(tab=>{
 
         loadItems(tab.dataset.category);
 
-    };
+    });
 
 });
 
-const dataFolders = {
-
-    clothes:"Clothes",
-
-    shoes:"shoes",
-
-    eyes:"eyes"
-
-};
-
+// أول تشغيل
 loadItems("clothes");

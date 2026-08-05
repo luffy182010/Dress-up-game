@@ -1,5 +1,15 @@
 const data = {
 
+        shoes: [
+        "shose1.png",
+        "shose2.png",
+        "shose3.png",
+        "shose4.png",
+        "shose5.png",
+        "shose6.png",
+        "shose7.png"
+    ],
+
     clothes: [
         "dress1.png",
         "dress2.png",
@@ -29,16 +39,7 @@ const data = {
         "eyes5.png",
         "eyes6.png",
         "eyes7.png"
-    ],
-
-    shoes: [
-        "shose1.png",
-        "shose2.png",
-        "shose3.png",
-        "shose4.png",
-        "shose5.png",
-        "shose6.png",
-        "shose7.png"
     ]
+
 
 };

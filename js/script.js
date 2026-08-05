@@ -7,10 +7,10 @@ const hair = document.getElementById("hair");
 
 // files name
 const folders = {
+    shoes: "shoes",
     clothes: "Clothes",
     hair: "hair/back",
-    eyes: "eyes",
-    shoes: "shoes"
+    eyes: "eyes"
 };
 
 // download items
@@ -32,6 +32,10 @@ function loadItems(category) {
 
             switch(category){
 
+                    case "shoes":
+                    shoes.src = `Img/shoes/${image}`;
+                    break;
+
                 case "clothes":
                     clothes.src = `Img/Clothes/${image}`;
                     break;
@@ -44,9 +48,7 @@ function loadItems(category) {
                     eyes.src = `Img/eyes/${image}`;
                     break;
 
-                case "shoes":
-                    shoes.src = `Img/shoes/${image}`;
-                    break;
+                
 
             }
 

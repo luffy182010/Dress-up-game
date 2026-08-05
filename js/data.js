@@ -32,13 +32,13 @@ const data = {
     ],
 
     shoes: [
-        "shoes1.png",
-        "shoes2.png",
-        "shoes3.png",
-        "shoes4.png",
-        "shoes5.png",
-        "shoes6.png",
-        "shoes7.png"
+        "shose1.png",
+        "shose2.png",
+        "shose3.png",
+        "shose4.png",
+        "shose5.png",
+        "shose6.png",
+        "shose7.png"
     ]
 
 };

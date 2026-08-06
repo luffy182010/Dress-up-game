@@ -1,6 +1,7 @@
 const data = {
 
         shoes: [
+        "shose0.png",
         "shose1.png",
         "shose2.png",
         "shose3.png",
@@ -12,6 +13,7 @@ const data = {
     ],
 
     clothes: [
+        "dress0.png",
         "dress1.png",
         "dress2.png",
         "dress3.png",
@@ -27,6 +29,7 @@ const data = {
     ],
 
     hair: [
+        "front0.png",
         "front1.png",
         "front2.png",
         "front3.png",
@@ -38,6 +41,7 @@ const data = {
     ],
 
     eyes: [
+        "eyes0.0ng",
         "eyes1.png",
         "eyes2.png",
         "eyes3.png",
